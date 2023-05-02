@@ -7,9 +7,16 @@
 	},
 	"name": "SN_GIT_TEST",
 	"description": null,
-	"ver": "23.5.2.198",
+	"ver": "23.5.2.1914",
 	"enableCICD": true,
-	"apps": [],
+	"apps": [
+		{
+			"id": "6dcc6868-abe8-481c-b821-759e62e2fb19",
+			"application": "sn_app_test",
+			"title": "",
+			"description": ""
+		}
+	],
 	"api": [],
 	"odataSource": [],
 	"odataMock": [],

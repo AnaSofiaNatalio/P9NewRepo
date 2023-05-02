@@ -1,0 +1,31 @@
+debugger;
+var amount = "6";
+//Number(amount);
+
+var wfData = {
+    "id": "50f7e207-bb1c-4ba6-b0fd-d3f13cb36a38",
+    "objectType": "test 2 levels with amount as string",
+    "objectKey": "objKey",
+    "amount": amount,
+    "currency": "EUR",
+    "approver": ""
+}
+
+$.ajax({
+    type: "POST",
+    contentType: "application/json",
+    url: "/api/functions/WorkflowInbox/Start", // Remember full path if triggered externally
+   // headers: { // Needed when triggered externally
+   //     "Authorization": "Basic xxxx ", // Or use Bearer + token (JWT from user)
+   //     "X-Requested-With": "XMLHttpRequest",
+   // },
+    data: JSON.stringify(wfData),
+    success: function(data) {
+        console.log("success");
+        // Success Handler
+    },
+    error: function(result, status) {
+        console.log("error");
+        // Error Handler
+    }
+});
